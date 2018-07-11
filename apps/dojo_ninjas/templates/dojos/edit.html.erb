@@ -1,0 +1,37 @@
+<h1>Editing <%= @dojos.branch %></h1>
+<form class="form-horizontal" action="/dojos/<%= @dojos.id %>" method= 'post'>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type = "hidden" name  = "_method" value = "patch">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="branch">Branch:</label>
+    <div class="col-sm-10">
+      <input type="branch" class="form-control" value = "<%= @dojos.branch %>"name="branch">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="street">Street:</label>
+    <div class="col-sm-10">
+      <input type="street" class="form-control" value="<%= @dojos.street %>" name="street">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="city">City:</label>
+    <div class="col-sm-10">
+      <input type="city" class="form-control" value="<%= @dojos.city %>" name="city">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="state">State:</label>
+    <div class="col-sm-10">
+      <input type="state" class="form-control" value="<%= @dojos.state %>" name="state">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Update</button>
+    </div>
+  </div>
+</form>
+
+  <u><a href="/dojos">Home</a></u>
